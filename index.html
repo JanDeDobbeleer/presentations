@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Continuous Integration</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <div>
+                    <div class="profile">
+                        <img src="img/avatar.jpg" alt="Person" width="96" height="96"></img>
+                    </div>
+                    <div class="profile" style="display: ruby-text-container;">
+                        <ul>
+                            <li>
+                                <h4>Jan De Dobbeleer</h4>
+                            </li>
+                            <li><a href="https://mastodon.herebedragons.io">@jan@herebedragons.io</a></li>
+                            <li><a href="https://twitter.com/jan_joris">@jan_joris</a></li>
+                            <li><a href="https://herebedragons.io">herebedragons.io</a></li>
+                            <li><a href="https://unleashed.be">UNLEASHED</a></li>
+                            <ul>
+                    </div>
+                </div>
+            </section>
+            <section data-markdown="slides/continuous_integration.md" data-separator="^\n---\n$" data-separator-vertical="^\n--\n$"></section>
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: false,
+            progress: true,
+            history: true,
+            center: true,
+            // Optional libraries used to extend on reveal.js
+            dependencies: [{
+                    src: 'lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: 'plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: 'plugin/notes/notes.js'
+                }
+            ]
+        });
+        Reveal.configure({
+            backgroundTransition: 'zoom'
+        })
+    </script>
+    <link rel="stylesheet" href="css/override.css">
+</body>
+
+</html>
